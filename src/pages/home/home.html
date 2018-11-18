@@ -1,14 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Camara
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <form [formGroup]="frmCreateNew" padding="10px">
+    <button ion-button (click)="takePhoto()" full color="primary">Tomar Foto</button>
+    <button ion-button (click)="getImage()" full color="secondary">Cargar Foto de la Galeria</button>
+    <button ion-button (click)="cropImage()" full color="danger">Recortar Imagen</button>
+    <button ion-button (click)="uploadImage()" full color="dark">Cargar Imagen</button>
+    <p align="center"><img src="{{ myphoto }}"></p>
+  </form>
 </ion-content>
